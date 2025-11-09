@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThinkControl - Mind-Controlled Interface</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="brain-icon">🧠</span>
+                    <span class="logo-text">Think<span class="accent">Control</span></span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#how-it-works" class="nav-link">How It Works</a>
+                    <a href="#results" class="nav-link">Results</a>
+                    <a href="demo.html" class="nav-link demo-link">Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Control Technology
+                        <span class="gradient-text">With Your Thoughts</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Brain-Computer Interface that reads motor imagery and translates thoughts into action. 
+                        No movement required. Just imagine.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">73.8%</div>
+                            <div class="stat-label">Accuracy</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">&lt;500ms</div>
+                            <div class="stat-label">Latency</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Non-Invasive</div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="demo.html" class="btn btn-primary">
+                            Try Live Demo 
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="#how-it-works" class="btn btn-secondary">
+                            Learn How
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="brain-animation">
+                        <div class="brain-wave wave-1"></div>
+                        <div class="brain-wave wave-2"></div>
+                        <div class="brain-wave wave-3"></div>
+                        <div class="brain-center">
+                            <div class="pulse-ring"></div>
+                            <div class="brain-icon-large">🧠</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">The Communication Gap</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">🧑‍🦽</div>
+                    <h3>5.4 Million</h3>
+                    <p>People in the US living with paralysis</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💭</div>
+                    <h3>The Challenge</h3>
+                    <p>Brain works, muscles don't. Traditional tech requires movement.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💡</div>
+                    <h3>Our Solution</h3>
+                    <p>Read intent directly from brain signals. No movement needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Four stages from thought to action</p>
+            
+            <div class="pipeline">
+                <div class="pipeline-step">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">📡</div>
+                    <h3>SENSE</h3>
+                    <p>EEG electrodes capture brain signals from motor cortex (C3, C4, Cz positions)</p>
+                    <div class="step-detail">160 Hz sampling rate</div>
+                </div>
+                
+                <div class="pipeline-arrow">→</div>
+                
+                <div class="pipeline-step">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">🔬</div>
+                    <h3>PROCESS</h3>
+                    <p>Filter 8-30 Hz (mu & beta bands), remove noise and artifacts</p>
+                    <div class="step-detail">Real-time filtering</div>
+                </div>
+                
+                <div class="pipeline-arrow">→</div>
+                
+                <div class="pipeline-step">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">🤖</div>
+                    <h3>DECODE</h3>
+                    <p>AI recognizes patterns using CSP spatial filtering + LDA classifier</p>
+                    <div class="step-detail">73.8% accuracy</div>
+                </div>
+                
+                <div class="pipeline-arrow">→</div>
+                
+                <div class="pipeline-step">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">⚡</div>
+                    <h3>ACT</h3>
+                    <p>Control cursor, game, or device in real-time</p>
+                    <div class="step-detail">&lt;500ms response</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brain Science -->
+    <section class="science-section">
+        <div class="container">
+            <div class="science-content">
+                <div class="science-text">
+                    <h2>The Neuroscience Behind It</h2>
+                    <p class="lead">When you imagine moving your hand, your motor cortex activates—even without actual movement.</p>
+                    
+                    <div class="science-points">
+                        <div class="science-point">
+                            <div class="point-icon">⚡</div>
+                            <div class="point-text">
+                                <h4>Event-Related Desynchronization (ERD)</h4>
+                                <p>Mu waves (8-12 Hz) decrease when imagining movement, creating a detectable pattern</p>
+                            </div>
+                        </div>
+                        <div class="science-point">
+                            <div class="point-icon">🎯</div>
+                            <div class="point-text">
+                                <h4>Lateralization</h4>
+                                <p>Left hand imagination activates RIGHT motor cortex—creating asymmetric signals we can detect</p>
+                            </div>
+                        </div>
+                        <div class="science-point">
+                            <div class="point-icon">✓</div>
+                            <div class="point-text">
+                                <h4>Works with Paralysis</h4>
+                                <p>Brain signals remain intact even when muscles don't respond—perfect for assistive technology</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="science-visual">
+                    <div class="brain-diagram">
+                        <svg viewBox="0 0 300 300" class="brain-svg">
+                            <!-- Brain outline -->
+                            <ellipse cx="150" cy="150" rx="100" ry="120" fill="none" stroke="#06B6D4" stroke-width="2"/>
+                            
+                            <!-- Motor cortex indicators -->
+                            <circle cx="100" cy="130" r="20" fill="#F97316" opacity="0.3">
+                                <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                            <text x="100" y="135" text-anchor="middle" fill="#fff" font-size="12">C3</text>
+                            
+                            <circle cx="200" cy="130" r="20" fill="#06B6D4" opacity="0.3">
+                                <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+                            </circle>
+                            <text x="200" y="135" text-anchor="middle" fill="#fff" font-size="12">C4</text>
+                            
+                            <circle cx="150" cy="120" r="15" fill="#10B981" opacity="0.3">
+                                <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite" begin="1s"/>
+                            </circle>
+                            <text x="150" y="125" text-anchor="middle" fill="#fff" font-size="12">Cz</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="results-section">
+        <div class="container">
+            <h2 class="section-title">Performance Metrics</h2>
+            <p class="section-subtitle">Validated across 5 subjects, 323 trials</p>
+            
+            <div class="results-grid">
+                <div class="result-card highlight">
+                    <div class="result-icon">🎯</div>
+                    <div class="result-number">73.8%</div>
+                    <div class="result-label">Test Accuracy</div>
+                    <div class="result-detail">Exceeds 70% target</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 73.8%"></div>
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-icon">🔄</div>
+                    <div class="result-number">71.7%</div>
+                    <div class="result-label">Cross-Validation</div>
+                    <div class="result-detail">5-fold CV mean</div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-icon">⚡</div>
+                    <div class="result-number">&lt;500ms</div>
+                    <div class="result-label">Response Time</div>
+                    <div class="result-detail">Real-time capable</div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-icon">📊</div>
+                    <div class="result-number">88%</div>
+                    <div class="result-label">Left Hand Recall</div>
+                    <div class="result-detail">Class 0 performance</div>
+                </div>
+            </div>
+
+            <!-- Confusion Matrix -->
+            <div class="confusion-matrix-container">
+                <h3>Classification Performance</h3>
+                <div class="confusion-matrix">
+                    <div class="matrix-labels">
+                        <div class="label-y">True Label</div>
+                        <div class="label-x">Predicted Label</div>
+                    </div>
+                    <table class="matrix-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Left Hand</th>
+                                <th>Right Hand</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="row-label">Left Hand</td>
+                                <td class="cell correct">37<span class="cell-percent">88%</span></td>
+                                <td class="cell incorrect">5<span class="cell-percent">12%</span></td>
+                            </tr>
+                            <tr>
+                                <td class="row-label">Right Hand</td>
+                                <td class="cell incorrect">12<span class="cell-percent">52%</span></td>
+                                <td class="cell correct">11<span class="cell-percent">48%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications -->
+    <section class="applications-section">
+        <div class="container">
+            <h2 class="section-title">Real-World Applications</h2>
+            <div class="applications-grid">
+                <div class="app-card">
+                    <div class="app-icon">🏥</div>
+                    <h3>Medical</h3>
+                    <ul>
+                        <li>Wheelchair control</li>
+                        <li>Communication for locked-in syndrome</li>
+                        <li>Stroke rehabilitation</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">🎮</div>
+                    <h3>Gaming & VR</h3>
+                    <ul>
+                        <li>Thought-controlled games</li>
+                        <li>Immersive VR without controllers</li>
+                        <li>Accessibility features</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">🤖</div>
+                    <h3>Robotics</h3>
+                    <ul>
+                        <li>Robotic arm control</li>
+                        <li>Prosthetic limbs</li>
+                        <li>Smart home integration</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">💼</div>
+                    <h3>Productivity</h3>
+                    <ul>
+                        <li>Hands-free computing</li>
+                        <li>Multitasking interfaces</li>
+                        <li>Enhanced accessibility</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Experience It Yourself</h2>
+                <p>See the system classify motor imagery in real-time</p>
+                <a href="demo.html" class="btn btn-large btn-primary">
+                    Launch Live Demo →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ThinkControl</h4>
+                    <p>Brain-Computer Interface Technology</p>
+                    <p class="footer-tagline">Built at NatHacks 2025</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <a href="demo.html">Live Demo</a>
+                    <a href="about.html">Technical Details</a>
+                    <a href="https://github.com/yourusername/bci">GitHub</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <a href="mailto:your-email@example.com">Email Us</a>
+                    <a href="#">Documentation</a>
+                    <a href="#">Research Paper</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Team</h4>
+                    <p>[Your Name]</p>
+                    <p>[Your School]</p>
+                    <p>Hackathon 2025</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ThinkControl. Built with 🧠 and Python.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

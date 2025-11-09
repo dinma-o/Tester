@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Demo - ThinkControl</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme demo-page">
+    
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="brain-icon">🧠</span>
+                    <span class="logo-text">Think<span class="accent">Control</span></span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">← Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Demo Interface -->
+    <section class="demo-container">
+        <div class="demo-header">
+            <h1>Live Classification Demo</h1>
+            <p>Simulating real-time motor imagery detection</p>
+        </div>
+
+        <div class="demo-grid">
+            
+            <!-- Left Panel: EEG Signals -->
+            <div class="demo-panel signal-panel">
+                <div class="panel-header">
+                    <h3>📡 EEG Signals</h3>
+                    <div class="channel-labels">
+                        <span class="channel c3">C3</span>
+                        <span class="channel c4">C4</span>
+                        <span class="channel cz">Cz</span>
+                    </div>
+                </div>
+                <div class="panel-content">
+                    <canvas id="eegCanvas" width="400" height="300"></canvas>
+                    <div class="signal-info">
+                        <span>Sampling Rate: 160 Hz</span>
+                        <span id="signalQuality">Signal Quality: <span class="quality-good">Excellent</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Panel: Classification -->
+            <div class="demo-panel classification-panel">
+                <div class="panel-header">
+                    <h3>🤖 Real-Time Classification</h3>
+                    <div class="status-indicator">
+                        <span class="status-dot active"></span>
+                        <span>Processing</span>
+                    </div>
+                </div>
+                <div class="panel-content center">
+                    
+                    <div class="prediction-display">
+                        <div class="prediction-label">Detected Movement:</div>
+                        <div id="predictionResult" class="prediction-result">
+                            <span class="prediction-icon">👈</span>
+                            <span class="prediction-text">LEFT HAND</span>
+                        </div>
+                        <div id="confidence" class="confidence-display">
+                            Confidence: <span class="confidence-value">87%</span>
+                        </div>
+                    </div>
+
+                    <div class="class-probabilities">
+                        <div class="prob-item">
+                            <div class="prob-label">
+                                <span class="prob-icon">👈</span> Left Hand
+                            </div>
+                            <div class="prob-bar-container">
+                                <div id="leftProb" class="prob-bar" style="width: 87%"></div>
+                            </div>
+                            <div id="leftValue" class="prob-value">87%</div>
+                        </div>
+                        <div class="prob-item">
+                            <div class="prob-label">
+                                <span class="prob-icon">👉</span> Right Hand
+                            </div>
+                            <div class="prob-bar-container">
+                                <div id="rightProb" class="prob-bar" style="width: 13%"></div>
+                            </div>
+                            <div id="rightValue" class="prob-value">13%</div>
+                        </div>
+                    </div>
+
+                    <div class="metrics-display">
+                        <div class="metric">
+                            <span class="metric-label">Latency:</span>
+                            <span id="latency" class="metric-value">245ms</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Accuracy:</span>
+                            <span class="metric-value">73.8%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Visual Feedback -->
+            <div class="demo-panel feedback-panel">
+                <div class="panel-header">
+                    <h3>🎯 Cursor Control</h3>
+                    <button id="resetBtn" class="btn-small">Reset Position</button>
+                </div>
+                <div class="panel-content">
+                    <div class="cursor-arena">
+                        <div class="target-zone left-zone">L</div>
+                        <div class="target-zone right-zone">R</div>
+                        <div id="cursor" class="cursor">
+                            <div class="cursor-trail"></div>
+                        </div>
+                        <div class="arena-center-line"></div>
+                    </div>
+                    <div class="cursor-stats">
+                        <div class="stat-item">
+                            <span>Position:</span>
+                            <span id="cursorPos">Center</span>
+                        </div>
+                        <div class="stat-item">
+                            <span>Hits Left:</span>
+                            <span id="hitsLeft">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span>Hits Right:</span>
+                            <span id="hitsRight">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <div class="demo-controls">
+            <button id="startBtn" class="btn btn-primary">
+                ▶ Start Demo
+            </button>
+            <button id="stopBtn" class="btn btn-secondary" disabled>
+                ⏸ Pause
+            </button>
+            <button id="randomBtn" class="btn btn-secondary">
+                🎲 Random Simulation
+            </button>
+        </div>
+
+        <!-- History Panel -->
+        <div class="history-panel">
+            <h3>Classification History</h3>
+            <div id="historyLog" class="history-log">
+                <div class="history-item">
+                    <span class="history-time">00:00</span>
+                    <span class="history-class left">Left Hand</span>
+                    <span class="history-conf">85%</span>
+                    <span class="history-result correct">✓</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Info Modal -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>How This Demo Works</h2>
+            <p>This demo simulates our real-time BCI system:</p>
+            <ul>
+                <li><strong>Left Panel:</strong> Simulated EEG signals from 3 motor cortex channels (C3, C4, Cz)</li>
+                <li><strong>Center Panel:</strong> AI classification results with confidence scores</li>
+                <li><strong>Right Panel:</strong> Visual cursor responding to detected motor imagery</li>
+            </ul>
+            <p><strong>In the real system:</strong> These signals come from actual brain activity captured via EEG electrodes.</p>
+        </div>
+    </div>
+
+    <script src="js/demo.js"></script>
+</body>
+</html>
